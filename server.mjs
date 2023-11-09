@@ -1,6 +1,7 @@
 // Import the 'http' and 'fs' modules
 import { createServer } from 'http';
 import { readFile } from 'fs';
+//import e from 'express';
 
 // Create an HTTP server using the createServer function
 const server = createServer((req, res) => {
@@ -36,11 +37,17 @@ const server = createServer((req, res) => {
       const formData = new URLSearchParams(reqBody);
       const name = formData.get('name');
       const email = formData.get('email');
-      const role = formData.get('role')
+      const role = formData.get('role');
       // Respond with a 200 status code and a thank you message
       res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end(`Thank you, ${name}, for submitting your email address: ${email}, as a QA Engineer`);
+      res.end(`Thank you, ${name}, for submitting your email: ${email}, as ${role}`);
     });
+  } 
+  // Add PUT method handling
+  else if (req.method === 'PUT' && req.url === '/update') {
+    // Handle PUT request logic here
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('PUT request received');
   } 
   // If the request does not match any of the above conditions, respond with a 404 status code
   else {
