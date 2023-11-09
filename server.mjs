@@ -39,7 +39,7 @@ const server = createServer((req, res) => {
       const role = formData.get('role')
       // Respond with a 200 status code and a thank you message
       res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end(`Thank you, ${name}, for submitting your email address: ${email}`);
+      res.end(`Thank you, ${name}, for submitting your email address: ${email}, as a QA Engineer`);
     });
   } 
   // If the request does not match any of the above conditions, respond with a 404 status code
