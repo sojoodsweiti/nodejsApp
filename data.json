@@ -1,0 +1,12 @@
+{
+    "employee": {
+      "id": 123,
+      "firstName": "Alice",
+      "lastName": "Smith",
+      "age": 28,
+      "department": "Engineering",
+      "isFullTime": true,
+      "skills": ["JavaScript", "HTML", "CSS"]
+    }
+  }
+  
