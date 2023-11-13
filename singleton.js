@@ -18,7 +18,7 @@ class Counter {
     input: process.stdin,
     output: process.stdout
   });
-  
+
   readLine.question('Enter the number of times to increment: ', function (userInputCount) {
     // Convert the user input to a number
     const countToIncrement = parseInt(userInputCount, 10);
